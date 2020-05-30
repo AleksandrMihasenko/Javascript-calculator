@@ -1,0 +1,121 @@
+/* reset style */
+*{padding:0;margin:0;border:0;}
+*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+:focus,:active{outline:none;}
+a:focus,a:active{outline:none;}
+nav,footer,header,aside{display:block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display:none;}
+button{cursor:pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration:none;}
+a:hover{text-decoration:none;}
+ul li{list-style:none;}
+img{vertical-align:top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
+/*--------------------*/
+
+
+
+body {
+    font-family: "Orbitron", sans-serif;
+    background-color: #969696;
+}
+
+.wrapper {
+    width: 980px;
+    margin: 0px auto;
+}
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    margin: 10% auto;
+    height: 410px;
+    width: 300px;
+    background-color: #dfd8d0;
+    border: 2px solid #908b85;
+    border-radius: 20px;
+    box-shadow: 10px 10px 34px 1px rgba(0, 0, 0, 0.5), inset -1px -6px 12px 0.1px #89847e;
+}
+
+.title {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.display {
+    width: 85%;
+    height: 65px;
+    background-color: #c3c2ab;
+    border: 2px solid #b4b39d;
+    border-radius: 5px;
+    margin: 0px auto;
+}
+
+.answer {
+    margin-right: 10px;
+    margin-top: 5px;
+    font-size: 35px;
+    text-align: right;
+}
+
+.history {
+    margin-right: 14px;
+    margin-top: 2px;
+    font-size: 15px;
+    text-align: right;
+    color: #8b8b7b;
+ }
+
+ .container {    
+    margin-top: 10px;
+ }
+
+.buttons {
+    font-size: 16px;
+    font-weight: bold;        
+    display: inline-block;
+    width: 280px;
+    height: auto;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+button {
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    background-color: #3a3a3a;
+    margin: 0 4px 10px 8px;
+    height: 40px;
+    width: 50px;
+    box-shadow: 0px 3px 0px 0px #222121, inset -1px -3px 10px 1px #515151;
+}
+
+button:active {
+    transform: translate(0px, 3px);
+    box-shadow: none;
+}
+
+button,
+button:hover,
+button:active,
+button:visited {
+  text-decoration: none !important;
+  outline: none !important;
+}
+
+.zero {
+    width: 117px;
+}
+
+.red {
+    font-size: 14px;
+    background-color: #a72d45;
+    box-shadow: 0px 3px 0px 0px #671c2a;
+}
