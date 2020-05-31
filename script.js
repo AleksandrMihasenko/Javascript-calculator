@@ -11,6 +11,7 @@ let showHistory = '';
 let result = '';
 let operator = '';
 let regExp = /\d/;
+let openResult = false;
 
 
 answer.innerHTML = displayAnswer;
@@ -22,14 +23,18 @@ buttons.addEventListener('click', event => {
 
         setFirstNum();    
 
-    } else if (regExp.test(event.target.getAttribute('data-value')) && secondNum.length < 6 && operator) {
+    } else if (regExp.test(event.target.getAttribute('data-value')) && secondNum.length < 6 && operator && !openResult) {
 
         setSecondNum();
 
     } else if (event.target.getAttribute('data-value') === 'c') {
+
         clearAll();
+
     } else if (event.target.getAttribute('data-value') === '.') {
-        console.log('dot');
+
+        // setDot();        
+        
     } else if (event.target.getAttribute('data-value') === '=') {
         
         calculateResult();
@@ -63,7 +68,7 @@ function setSign() {
 function calculateResult() {
     switch (operator) {
         case '+': 
-            result = parseInt(firstNum) + parseInt(secondNum);
+            result = parseFloat(firstNum) + parseFloat(secondNum);
             answer.innerHTML = result;            
             break;
         case '-': 
@@ -79,7 +84,17 @@ function calculateResult() {
             answer.innerHTML = result;
             break;
     }
+    openResult = true;
 }
+
+// function setDot() {
+//     if (!operator && !firstNum.includes('.')) {
+//         firstNum += '.';
+//         answer.innerHTML = firstNum;      
+//         history.innerHTML = firstNum;
+//         // console.log('dot');
+//     }
+// }
 
 function clearAll() {
     firstNum = '';
@@ -87,4 +102,5 @@ function clearAll() {
     operator = '';
     answer.innerHTML = displayAnswer;
     history.innerHTML = displayHistory;
+    openResult = false;
 }
